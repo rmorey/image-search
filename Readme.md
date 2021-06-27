@@ -33,14 +33,11 @@ End Time: TBD
   - display relevant tags
   - assumed: the image itself
 
-### Known Issues
-- Once a search is made on mobile, the list fills the screen and blocks the user from entering another search term. Pretty lame.
 
-### Todo:
-- Add user profile image to details page
+
+### To-do/would-do:
 - Fix search bar width on mobile
-- Figure out how to actually rezize image on details screen properly (something something `resizeMode`?)
-- make not ugly
+- make less ugly
  
 #### Done
 - Get and test Pixabay API key
@@ -55,3 +52,4 @@ End Time: TBD
 - add image to details screen
 - Add more details to details screen
 - Make return key launch search
+- Add user profile image to details page
