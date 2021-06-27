@@ -8,10 +8,15 @@ const API_KEY = '22259626-cf646f94d7bf37e93a1753150';
 
 
 function DetailsScreen({ route, navigation }) {
-
+  const item = route.params;
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>{JSON.stringify(route.params)}</Text>
+      <Image 
+          source={{uri: item.webformatURL}}
+          style={{flex:1, width: 100, height:100 }}
+          resizeMode="contain"
+
+          />
     </View>
   );
 }
