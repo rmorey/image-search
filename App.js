@@ -73,14 +73,26 @@ function SearchScreen({ navigation }) {
 function DetailsScreen({ route, navigation }) {
   const item = route.params;
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Posted by {item.user}</Text>
-      <Text>{item.tags}</Text>
-      <Image
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center", flexDirection:'row' }}>
+            <Image
         source={{ uri: item.webformatURL }}
-        style={{ flex: 1, width: 100, height: 100 }}
+        style={{ flex: 1, width: 200, height: 200 }}
         resizeMode="contain"
       />
+      <Image
+        source = {{uri: item.userImageURL}}
+        style={{ width: 40, height: 40 }}
+        resizeMode="contain"
+        />
+
+        <View style={{flexDirection:'column', alignContent:'left'}}>
+        <Text>Posted by {item.user}</Text>
+
+<Text>Tags: {item.tags}</Text>
+
+        </View>
+
+ 
     </View>
   );
 }
