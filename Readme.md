@@ -30,7 +30,7 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
   - assumed: the image itself
 
 ### Todo:
-- Mockup search screen
+
 - Mockup Details screen
 - Implement Search with Dummy Data
 - Implement Details with Dummy Data
@@ -42,3 +42,4 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
   - Search: https://pixabay.com/api/docs/#api_search_images    
   - Pizza: https://pixabay.com/api/?key=22259626-cf646f94d7bf37e93a1753150&q=pizza     
 - Init Expo app
+- Mockup search screen
