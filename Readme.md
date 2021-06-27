@@ -33,6 +33,9 @@ End Time: TBD
   - display relevant tags
   - assumed: the image itself
 
+### Known Issues
+- Once a search is made on mobile, the list fills the screen and blocks the user from entering another search term. Pretty lame.
+
 ### Todo:
 - Add user profile image to details page
 - Fix search bar width on mobile
