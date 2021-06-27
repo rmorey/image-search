@@ -30,10 +30,11 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
 
 ### Todo:
 
-- Fetch thumbnails for list
+
 - Mockup Details screen
 - Implement Details with Dummy Data
 - fetch userImageURL
+- make not ugly
 
 #### Done
 - Get and test Pixabay API key
@@ -43,3 +44,4 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
 - Mockup search screen
 - Implement Search with Dummy Data
 - call fetch on pixabay and populate search list (details included)
+- Fetch thumbnails for list
