@@ -3,11 +3,10 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput, SafeAreaView, FlatList} from 'react-native';
 
 const API_KEY = '22259626-cf646f94d7bf37e93a1753150';
-var URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent('red roses');
-
 
 export default function App() {
   const [text, onChangeText] = React.useState(null);
+  const [results, setResults] = React.useState([]);
   return (
     <View style={styles.container}>
       <SafeAreaView>
@@ -21,11 +20,14 @@ export default function App() {
         title="Go"
         disabled={!text}
         onPress={()=>{
-          console.log(`URL: https://pixabay.com/api/?key=${API_KEY}&q=${text}`)
+          fetch(`https://pixabay.com/api/?key=${API_KEY}&q=${text}`)
+          .then(response => response.json())
+          .then(data => setResults(data))
+
         }}
       />
             <FlatList
-        data={PizzaData.hits}
+        data={results.hits}
         renderItem={({item}) => <Text style={styles.item}>{item.previewURL}</Text>}
       />
       <StatusBar style="auto" />
