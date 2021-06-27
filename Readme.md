@@ -5,7 +5,9 @@ Start Time: Noon on Jun 27
 
 End Time: TBD
 
-Expo Go Link: [🔗](https://expo.io/--/to-exp/exp%3A%2F%2F23-rga.anonymous.prophone-takehome-pixabay.exp.direct%3A80)
+## Live Result
+- Web: https://vercel.com/rtm/prophone-takehome-pixabay/settings
+- Expo Go Link: [🔗](https://expo.io/--/to-exp/exp%3A%2F%2F23-rga.anonymous.prophone-takehome-pixabay.exp.direct%3A80)
 
 
 # Assignment
