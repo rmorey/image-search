@@ -41,17 +41,20 @@ function SearchScreen({ navigation }) {
   }
   return (
     <SafeAreaView style={styles.container}>
-        <TextInput
-          style={styles.input}
-          returnKeyType="search"
-          autoFocus={true}
-          onChangeText={onChangeQuery}
-          onSubmitEditing={() => fetchResults()}
-          placeholder="Enter Search Term"
-        />
-        <Button 
-        style={{padding: 20}}
-        title="Go" disabled={!query} onPress={() => fetchResults()} />
+      <TextInput
+        style={styles.input}
+        returnKeyType="search"
+        autoFocus={true}
+        onChangeText={onChangeQuery}
+        onSubmitEditing={() => fetchResults()}
+        placeholder="Enter Search Term"
+      />
+      <Button
+        style={{ padding: 20 }}
+        title="Go"
+        disabled={!query}
+        onPress={() => fetchResults()}
+      />
 
       <FlatList
         style={styles.list}
@@ -74,25 +77,22 @@ function DetailsScreen({ route, navigation }) {
   const item = route.params;
   return (
     <SafeAreaView style={styles.container}>
-            <Image
+      <Image
         source={{ uri: item.webformatURL }}
         style={{ flex: 1, width: 400, height: 400 }}
         resizeMode="contain"
       />
       <Image
-        source = {{uri: item.userImageURL}}
+        source={{ uri: item.userImageURL }}
         style={{ width: 50, height: 50 }}
         resizeMode="contain"
-        />
+      />
 
-        <View style={{flexDirection:'column', alignContent:'left'}}>
+      <View style={{ flexDirection: "column", alignContent: "left" }}>
         <Text>Posted by {item.user}</Text>
 
-<Text>Tags: {item.tags}</Text>
-
-        </View>
-
- 
+        <Text>Tags: {item.tags}</Text>
+      </View>
     </SafeAreaView>
   );
 }
