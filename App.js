@@ -2,6 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput, SafeAreaView, FlatList} from 'react-native';
 
+const API_KEY = '22259626-cf646f94d7bf37e93a1753150';
+var URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent('red roses');
+
 
 export default function App() {
   const [text, onChangeText] = React.useState(null);
@@ -16,7 +19,10 @@ export default function App() {
     </SafeAreaView>
       <Button
         title="Go"
-        onPress={()=>console.log(`User searched for ${text}`)}
+        disabled={!text}
+        onPress={()=>{
+          console.log(`URL: https://pixabay.com/api/?key=${API_KEY}&q=${text}`)
+        }}
       />
             <FlatList
         data={PizzaData.hits}
@@ -26,6 +32,7 @@ export default function App() {
     </View>
   );
 }
+
 
 
 const styles = StyleSheet.create({
