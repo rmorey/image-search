@@ -1,10 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Button, TextInput, SafeAreaView, FlatList, Image} from 'react-native';
+import { Pressable, StyleSheet, Text, View, Button, TextInput, SafeAreaView, FlatList, Image} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+function DetailsScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text>
+    </View>
+  );
+}
+
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Search" component={SearchScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
+
+
 
 const API_KEY = '22259626-cf646f94d7bf37e93a1753150';
 
-export default function App() {
+
+
+function SearchScreen({ navigation }) {
   const [text, onChangeText] = React.useState(null);
   const [results, setResults] = React.useState([]);
   return (
@@ -29,9 +58,15 @@ export default function App() {
             <FlatList
         data={results.hits}
         renderItem={({item}) => 
+        <Pressable
+        onPress={() => navigation.navigate('Details')}
+        >
         <Image 
           source={{uri: item.previewURL}}
-          style={{width: 50, height: 50}}/>
+          style={{width: 50, height: 50 }}
+          />
+        </Pressable>
+
       }
       />
       <StatusBar style="auto" />
