@@ -73,15 +73,15 @@ function SearchScreen({ navigation }) {
 function DetailsScreen({ route, navigation }) {
   const item = route.params;
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center", flexDirection:'row' }}>
+    <SafeAreaView style={styles.container}>
             <Image
         source={{ uri: item.webformatURL }}
-        style={{ flex: 1, width: 200, height: 200 }}
+        style={{ flex: 1, width: 400, height: 400 }}
         resizeMode="contain"
       />
       <Image
         source = {{uri: item.userImageURL}}
-        style={{ width: 20, height: 20 }}
+        style={{ width: 50, height: 50 }}
         resizeMode="contain"
         />
 
@@ -93,7 +93,7 @@ function DetailsScreen({ route, navigation }) {
         </View>
 
  
-    </View>
+    </SafeAreaView>
   );
 }
 
