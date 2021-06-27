@@ -39,5 +39,6 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
 
 #### Done
 - Get and test Pixabay API key
-  - Search: https://pixabay.com/api/docs/#api_search_images         
+  - Search: https://pixabay.com/api/docs/#api_search_images    
+  - Pizza: https://pixabay.com/api/?key=22259626-cf646f94d7bf37e93a1753150&q=pizza     
 - Init Expo app
