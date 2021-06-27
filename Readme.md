@@ -35,6 +35,7 @@ End Time: TBD
 
 ### Todo:
 - Fix search bar width on mobile
+- Make return key launch search
 - Figure out how to actually rezize image on details screen properly (something something `resizeMode`?)
 - generally make not ugly
 - tidy code
