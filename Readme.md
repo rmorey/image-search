@@ -33,9 +33,7 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
 ### Todo:
 
 
-- Mockup Details screen
-- Implement Details with Dummy Data
-- fetch userImageURL
+- Add more details to details screen
 - make not ugly
 
 #### Done
@@ -48,3 +46,4 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
 - call fetch on pixabay and populate search list (details included)
 - Fetch thumbnails for list
 - add react-nav: https://reactnavigation.org/docs/hello-react-navigation
+- add image to details screen
