@@ -31,9 +31,8 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
   - assumed: the image itself
 
 ### Todo:
-
-
-- Add more details to details screen
+- Fix search bar width on mobile
+- Figure out how to actually rezize image on details screen properly (something something `resizeMode`?)
 - make not ugly
 
 #### Done
@@ -47,3 +46,4 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
 - Fetch thumbnails for list
 - add react-nav: https://reactnavigation.org/docs/hello-react-navigation
 - add image to details screen
+- Add more details to details screen
