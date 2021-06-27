@@ -6,7 +6,7 @@ Start Time: Noon on Jun 27
 End Time: TBD
 
 ## Live App
-- [Web (Vercel)](https://prophone-takehome-pixabay.vercel.app)
+- [Web (Vercel)](https://takehome.vercel.app)
 - [Expo Go](https://expo.io/@rmorey/prophone-takehome-pixabay)
 <img width="212" alt="Screen Shot 2021-06-27 at 2 17 09 PM" src="https://user-images.githubusercontent.com/4590343/123555221-5f3c2780-d752-11eb-9bfe-8e9ab3a00194.png">
 
@@ -34,12 +34,11 @@ End Time: TBD
   - assumed: the image itself
 
 ### Todo:
+- Add user profile image to details page
 - Fix search bar width on mobile
-- Make return key launch search
 - Figure out how to actually rezize image on details screen properly (something something `resizeMode`?)
-- generally make not ugly
-- tidy code
-
+- make not ugly
+ 
 #### Done
 - Get and test Pixabay API key
   - Search: https://pixabay.com/api/docs/#api_search_images    
@@ -52,3 +51,4 @@ End Time: TBD
 - add react-nav: https://reactnavigation.org/docs/hello-react-navigation
 - add image to details screen
 - Add more details to details screen
+- Make return key launch search
