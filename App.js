@@ -16,6 +16,67 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const API_KEY = "22259626-cf646f94d7bf37e93a1753150";
 
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Search" component={SearchScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+function SearchScreen({ navigation }) {
+  const [query, onChangeQuery] = React.useState(null);
+  const [results, setResults] = React.useState([]);
+  function fetchResults() {
+    fetch(`https://pixabay.com/api/?key=${API_KEY}&q=${query}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setResults(data);
+
+        console.log(data);
+      });
+  }
+  return (
+    <SafeAreaView style={styles.container}>
+      <View
+        style={[
+          styles.container,
+          {
+            flexDirection: "row",
+          },
+        ]}
+      >
+        <TextInput
+          style={styles.input}
+          returnKeyType="search"
+          autoFocus={true}
+          onChangeText={onChangeQuery}
+          onSubmitEditing={() => fetchResults()}
+          placeholder="Enter Search Term"
+        />
+        <Button title="Go" disabled={!query} onPress={() => fetchResults()} />
+      </View>
+
+      <FlatList
+        style={styles.list}
+        data={results.hits}
+        renderItem={({ item }) => (
+          <Pressable onPress={() => navigation.navigate("Details", item)}>
+            <Image
+              source={{ uri: item.previewURL }}
+              style={{ width: 50, height: 50 }}
+            />
+          </Pressable>
+        )}
+      />
+      <StatusBar style="auto" />
+    </SafeAreaView>
+  );
+}
+
 function DetailsScreen({ route, navigation }) {
   const item = route.params;
   return (
@@ -33,56 +94,6 @@ function DetailsScreen({ route, navigation }) {
 
 const Stack = createStackNavigator();
 
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Search" component={SearchScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
-
-export default App;
-
-function SearchScreen({ navigation }) {
-  const [text, onChangeText] = React.useState(null);
-  const [results, setResults] = React.useState([]);
-  return (
-    <View style={styles.container}>
-      <SafeAreaView>
-        <TextInput
-          style={styles.input}
-          onChangeText={onChangeText}
-          placeholder="Enter search term"
-        />
-      </SafeAreaView>
-      <Button
-        title="Go"
-        disabled={!text}
-        onPress={() => {
-          fetch(`https://pixabay.com/api/?key=${API_KEY}&q=${text}`)
-            .then((response) => response.json())
-            .then((data) => setResults(data));
-        }}
-      />
-      <FlatList
-        data={results.hits}
-        renderItem={({ item }) => (
-          <Pressable onPress={() => navigation.navigate("Details", item)}>
-            <Image
-              source={{ uri: item.previewURL }}
-              style={{ width: 50, height: 50 }}
-            />
-          </Pressable>
-        )}
-      />
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -91,8 +102,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   input: {
+    padding: 10,
     height: 40,
     margin: 12,
     borderWidth: 1,
+  },
+  list: {
+    padding: 10,
   },
 });
