@@ -32,7 +32,7 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
 
 ### Todo:
 
-
+- add react-nav: https://reactnavigation.org/docs/hello-react-navigation
 - Mockup Details screen
 - Implement Details with Dummy Data
 - fetch userImageURL
