@@ -1,13 +1,14 @@
 # prophone-takehome-pixabay
-Ryan's Take-Home assessment for ProPhone using Pixabay\
+Ryan's Take-Home assessment for ProPhone using Pixabay
 
 Start Time: Noon on Jun 27
 
 End Time: TBD
 
-## Live Result
-- Web: https://vercel.com/rtm/prophone-takehome-pixabay/settings
-- Expo Go Link: [🔗](https://expo.io/--/to-exp/exp%3A%2F%2F23-rga.anonymous.prophone-takehome-pixabay.exp.direct%3A80)
+## Live App
+- [Web (Vercel)](https://prophone-takehome-pixabay.vercel.app)
+- [Expo Go](https://expo.io/@rmorey/prophone-takehome-pixabay)
+<img width="212" alt="Screen Shot 2021-06-27 at 2 17 09 PM" src="https://user-images.githubusercontent.com/4590343/123555221-5f3c2780-d752-11eb-9bfe-8e9ab3a00194.png">
 
 
 # Assignment
@@ -35,7 +36,8 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
 ### Todo:
 - Fix search bar width on mobile
 - Figure out how to actually rezize image on details screen properly (something something `resizeMode`?)
-- make not ugly
+- generally make not ugly
+- tidy code
 
 #### Done
 - Get and test Pixabay API key
