@@ -41,14 +41,7 @@ function SearchScreen({ navigation }) {
   }
   return (
     <SafeAreaView style={styles.container}>
-      <View
-        style={[
-          styles.container,
-          {
-            flexDirection: "row",
-          },
-        ]}
-      >
+      <View style={[styles.container, { flexDirection: "row" }]}>
         <TextInput
           style={styles.input}
           returnKeyType="search"
@@ -67,7 +60,7 @@ function SearchScreen({ navigation }) {
           <Pressable onPress={() => navigation.navigate("Details", item)}>
             <Image
               source={{ uri: item.previewURL }}
-              style={{ width: 50, height: 50 }}
+              style={{ width: 75, height: 75 }}
             />
           </Pressable>
         )}
