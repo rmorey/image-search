@@ -1,9 +1,9 @@
 # prophone-takehome-pixabay
-Ryan's Take-Home assessment for ProPhone using Pixabay
+Ryan's Take-Home assessment for ProPhone using Pixabay, completed on June 27
 
-Start Time: Noon on Jun 27
+Start Time: Noon
 
-End Time: TBD
+End Time: 4pm (see commit history) 
 
 ## Live App
 - [Web (Vercel)](https://takehome.vercel.app)
@@ -12,9 +12,6 @@ End Time: TBD
 
 ### Screenshots
 ![Untitled Diagram](https://user-images.githubusercontent.com/4590343/123557649-0b383f80-d760-11eb-95c1-5b716acafbe3.png)
-
-
-
 
 
 
