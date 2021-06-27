@@ -30,9 +30,6 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
   - assumed: the image itself
 
 ### Todo:
-- Get and test Pixabay API key
-  - Search: https://pixabay.com/api/docs/#api_search_images         
-- Init Expo app
 - Mockup search screen
 - Mockup Details screen
 - Implement Search with Dummy Data
@@ -40,3 +37,7 @@ You will have 3-4 hours to complete this challenge and we ask that you complete 
 - call fetch on pixabay and populate search list (details included)
 - fetch userImageURL
 
+#### Done
+- Get and test Pixabay API key
+  - Search: https://pixabay.com/api/docs/#api_search_images         
+- Init Expo app
