@@ -41,7 +41,6 @@ function SearchScreen({ navigation }) {
   }
   return (
     <SafeAreaView style={styles.container}>
-      <View style={[styles.container, { flexDirection: "row" }]}>
         <TextInput
           style={styles.input}
           returnKeyType="search"
@@ -50,8 +49,9 @@ function SearchScreen({ navigation }) {
           onSubmitEditing={() => fetchResults()}
           placeholder="Enter Search Term"
         />
-        <Button title="Go" disabled={!query} onPress={() => fetchResults()} />
-      </View>
+        <Button 
+        style={{padding: 20}}
+        title="Go" disabled={!query} onPress={() => fetchResults()} />
 
       <FlatList
         style={styles.list}
@@ -81,7 +81,7 @@ function DetailsScreen({ route, navigation }) {
       />
       <Image
         source = {{uri: item.userImageURL}}
-        style={{ width: 40, height: 40 }}
+        style={{ width: 20, height: 20 }}
         resizeMode="contain"
         />
 
