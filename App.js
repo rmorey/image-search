@@ -4,10 +4,14 @@ import { Pressable, StyleSheet, Text, View, Button, TextInput, SafeAreaView, Fla
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-function DetailsScreen() {
+const API_KEY = '22259626-cf646f94d7bf37e93a1753150';
+
+
+function DetailsScreen({ route, navigation }) {
+
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
+      <Text>{JSON.stringify(route.params)}</Text>
     </View>
   );
 }
@@ -29,7 +33,7 @@ export default App;
 
 
 
-const API_KEY = '22259626-cf646f94d7bf37e93a1753150';
+
 
 
 
@@ -59,7 +63,7 @@ function SearchScreen({ navigation }) {
         data={results.hits}
         renderItem={({item}) => 
         <Pressable
-        onPress={() => navigation.navigate('Details')}
+        onPress={() => navigation.navigate('Details',item)}
         >
         <Image 
           source={{uri: item.previewURL}}
