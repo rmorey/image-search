@@ -40,7 +40,7 @@ End Time: 4pm (see commit history)
 
 
 ### To-do/would-do:
-- Fix search bar width on mobile
+- ~~Fix search bar width on mobile~~ I've decided it's a feature
 - make less ugly
  
 #### Done
